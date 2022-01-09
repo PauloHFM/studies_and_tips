@@ -1,5 +1,3 @@
-# Airflow Fundamentals Course
-
 # Airflow Basics
 
 ## Installation
@@ -482,7 +480,7 @@ If you want to personalize what the airflow do on failure, use `on_failure_callb
 
 ### Executors
 
-https://airflow.apache.org/docs/apache-airflow/stable/executor/index.html
+[Executors Documentation](https://airflow.apache.org/docs/apache-airflow/stable/executor/index.html)
 
 Begind every executor, there is the queue, that defines the order. The queue is where the tasks will pulled and pushed by the workers, defining wchich executor to use.
 By default is the executor is the SequentialExecutor
@@ -506,27 +504,3 @@ To check the metadata database, go to `airflow.cfg` at `sql_alchemy_conn = `
     - `max_active_runs_per_dag`: Number of DAG Runs to run at same time within the same DAG defined at `airflow.cfg` (16 default)
     - `max_active_runs_per_dag`: Number of DAG Runs to run at same time within the same DAG defined at DAG object.
     - `concurrency`: Number of Tasks to run at same time within the same DAG defined at DAG object.
-
-# Basics of Airflow
-## Use Cases
-## Components 
-## Core Concepts 
-## Installing 
-## Updating
-
-# Interacting with Airflow
-## Command Line Interface 
-## User Interface 
-## Rest API
-
-# DAGs
-## DAG Basics
-## Monitoring
-## XCOMs
-## Connections
-
-# Parallelism
-## Executors
-## Parallelism
-
-free-retry-exam-airflow-fundamentals
