@@ -342,17 +342,17 @@ When you want to rerun some DAG Runs, in specific dates (start_date and end_date
 
 #### Operators good Practices
 
-    - Always separate your tasks in many operators, not one task that does it all.
-    - unique task_id for every task
-    - Idempotency: Every time you run task, you get the same results
-    - To not repeat the same parameters for every task/operator, use `default_args`
-    - If `default_args` is defined, you can define the different arguments in each task definition.
-    - Visit [Base Operator Class](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/models/baseoperator/index.html) to see all arguments.
+- Always separate your tasks in many operators, not one task that does it all.
+- unique task_id for every task
+- Idempotency: Every time you run task, you get the same results
+- To not repeat the same parameters for every task/operator, use `default_args`
+- If `default_args` is defined, you can define the different arguments in each task definition.
+- Visit [Base Operator Class](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/models/baseoperator/index.html) to see all arguments.
 
 #### Python Operator
 
-    - `python_callable`: Function to be called when task initiates.
-    - Access context of DAG. Since all operators inherit the Base operator, all context is in all operators!
+- `python_callable`: Function to be called when task initiates.
+- Access context of DAG. Since all operators inherit the Base operator, all context is in all operators!
 
     ```python
     def _downloading_data(**kwargs):
@@ -366,7 +366,7 @@ When you want to rerun some DAG Runs, in specific dates (start_date and end_date
         print(ds)
         pass
     ```
-    - `op_kwargs`: Use this to pass parameters to your functions.
+- `op_kwargs`: Use this to pass parameters to your functions.
 
 #### Sensor Operator
 Basic Operators that waits for something to happen, to continue the pipeline.
